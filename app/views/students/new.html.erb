@@ -1,6 +1,6 @@
 <h1>New Student</h1>
 
-<%= form_for :students, url: students_path, class: "mt-4", data: { controller: "validations", action: "submit->validations#reset" } do |f| %>
+<%= form_for :students, url: students_path, class: "mt-4" do |f| %>
   <% @students.each do |student| %>
     <%= f.fields_for 'students[]', student do |s| %>
       <div class="col-6 form-group <%= validation_status student, :first_name %>" id="<%= "student_#{@students.index(student)}" %>">

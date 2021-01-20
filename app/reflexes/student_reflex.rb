@@ -1,5 +1,3 @@
-require "byebug"
-
 class StudentReflex < ApplicationReflex
 
   def add
